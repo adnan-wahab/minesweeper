@@ -1,0 +1,96 @@
+* {
+    user-select: none;
+}
+
+.instructions {
+    color: white;
+}
+.navbar.navbar-inverse {
+  border-radius: 0;
+}
+.navbar-header {
+  float: left;
+}
+.navbar-right {
+  float: right;
+  margin-right: -15px;
+}
+.btn {
+  margin: 5px;
+}
+.game {
+  color: black;
+}
+.board {
+  display: block;
+  outline: 4px solid #666;
+  margin: 20px auto;
+  width: calc(8 * 64px);
+  height: calc(8 * 64px);
+  font-size: 0;
+}
+
+.cell-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.cell, .cell-cover {
+  font-size: 22px;
+  font-weight: bold;
+  vertical-align: top;
+  cursor: default;
+
+  position: relative;
+  top: -1px;
+  left: -1px;
+  border: 1px solid #666;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: white;
+  color: #333;
+}
+.cell-cover {
+  position: absolute;
+  background-color: aliceblue;
+  opacity: 1;
+}
+
+.cell-cover:hover {
+    opacity: .5;
+}
+
+.cell:empty:after, .tile-cover:empty:after {
+  content: '\200b';
+}
+
+.cell.clicked {
+  background-color: red;
+}
+
+.game.is-active .cell-cover {
+  cursor: pointer;
+}
+.game:not(.is-active).is-winner .cell-cover {
+  opacity: 1;
+}
+
+
+.game:not(.is-active).is-winner .cell {
+  background-color: green;
+}
+
+.game:not(.is-active):not(.is-winner) .cell {
+    background-color: white;
+}
+
+.game{
+    color: #feffff;
+}
+
+body {
+    background: #333 !important;
+}
