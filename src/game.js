@@ -82,7 +82,7 @@ export class Game extends Component {
       this.cellChainReveal(cell.x, cell.y);
 
     for (let cell of this.state.cells) {
-      if (cell.hasBomb && !cell.isCovered && ! isShift) {
+      if (cell.hasBomb && !cell.isCovered && ! cell.isFlagged) {
         this.setState({isActive: false, isWinner: false});
       }
     }
